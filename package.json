@@ -1,0 +1,34 @@
+{
+  "name": "platzivideo-cssgrid",
+  "version": "1.0.0",
+  "description": "Project of platzi video using css grid layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afvalenciab/PlatziVideo-CSSGrid.git"
+  },
+  "keywords": [
+    "Platzi",
+    "video",
+    "video",
+    "Css",
+    "grid"
+  ],
+  "author": "Andres Valencia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afvalenciab/PlatziVideo-CSSGrid/issues"
+  },
+  "homepage": "https://github.com/afvalenciab/PlatziVideo-CSSGrid#readme",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
+}
