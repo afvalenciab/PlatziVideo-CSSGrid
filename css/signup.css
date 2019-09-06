@@ -1,34 +1,10 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?a57ofv");
-  src: url("../fonts/icomoon.eot?a57ofv#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?a57ofv") format("truetype"), url("../fonts/icomoon.woff?a57ofv") format("woff"), url("../fonts/icomoon.svg?a57ofv#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^=icon-],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak-as: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.footer, .login form .login__options {
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footer a, .login .login__singup a, .login .login__social a, .login form .login__options a {
+.footer a, .signup .singup__login a {
   text-decoration: none;
   color: #fff;
   font-size: 0.9em;
@@ -36,7 +12,7 @@
   will-change: transform;
 }
 
-.footer a:hover, .login .login__singup a:hover, .login .login__social a:hover, .login form .login__options a:hover {
+.footer a:hover, .signup .singup__login a:hover {
   text-decoration: underline;
   transform: scale(1.02);
   transform-origin: 0 100%;
@@ -50,7 +26,7 @@ body {
   display: grid;
   grid-gap: 5px;
   grid-template: 70px minmax(357px, calc(100vh - 170px)) 70px/1fr 320px 1fr;
-  grid-template-areas: "header header header" ". login ." "footer footer footer";
+  grid-template-areas: "header header header" ". signup ." "footer footer footer";
   background: linear-gradient(#21c08b, #8f57fd);
   padding: 10px;
   box-sizing: border-box;
@@ -71,10 +47,10 @@ body {
   height: inherit;
 }
 
-.login {
-  grid-area: login;
+.signup {
+  grid-area: signup;
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
   grid-row-gap: 5px;
   align-items: center;
   align-content: space-evenly;
@@ -84,12 +60,12 @@ body {
   padding: 0 30px;
   background: rgba(255, 255, 255, 0.1);
 }
-.login h2 {
+.signup h2 {
   margin: 0;
   margin: 15px 0;
   font-size: 1.3em;
 }
-.login form > input {
+.signup form > input {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -103,11 +79,11 @@ body {
   color: #fff;
   font-family: "Muli", sans-serif;
 }
-.login form input::placeholder {
+.signup form input::placeholder {
   color: #fff;
   font-weight: 100;
 }
-.login form button {
+.signup form button {
   width: 100%;
   border: 0;
   height: 40px;
@@ -123,41 +99,17 @@ body {
   transition: 0.3s;
   will-change: transform;
 }
-.login form button:active {
+.signup form button:active {
   transform: scale(0.9);
 }
-.login form .login__options {
-  font-size: 0.9em;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-.login form .login__options a {
-  display: inline-block;
-  font-size: 1em;
-}
-.login form .login__options input[type=checkbox] {
-  margin: 0;
-  width: 14.3px;
-  height: 14.3px;
-}
-.login .login__social a {
-  display: block;
-  margin-bottom: 10px;
-}
-.login .icon-google:before {
-  content: "";
-}
-.login .icon-twitter:before {
-  content: "";
-}
-.login .login__singup {
+.signup .singup__login {
   font-size: 0.9em;
 }
-.login .login__singup p {
+.signup .singup__login p {
   margin: 0;
   margin-bottom: 15px;
 }
-.login .login__singup a {
+.signup .singup__login a {
   display: inline-block;
   font-size: 1em;
   font-weight: 600;
@@ -172,7 +124,7 @@ body {
 @media screen and (max-width: 480px) {
   .container {
     grid-template: 50px minmax(357px, calc(100vh - 150px)) 70px/minmax(320px, 1fr);
-    grid-template-areas: "header" "login" "footer";
+    grid-template-areas: "header" "signup" "footer";
   }
 
   .header {
@@ -185,17 +137,14 @@ body {
     height: inherit;
   }
 
-  .login {
+  .signup {
     font-size: 14px;
     border: initial;
     border-radius: initial;
     padding: 0;
     background: none;
   }
-  .login .login__social a {
-    text-align: center;
-  }
-  .login .login__singup {
+  .signup .singup__login {
     text-align: center;
   }
 
@@ -213,4 +162,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=signup.css.map */
