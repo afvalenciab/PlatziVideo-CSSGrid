@@ -1,0 +1,62 @@
+.footer a {
+  text-decoration: none;
+  color: #FFF;
+  margin-right: 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 70px minmax(200px, calc(100vh - 170px)) 70px;
+  grid-row-gap: 5px;
+  background: linear-gradient(#21C08B, #8F57FD);
+  color: #FFF;
+  font-family: "Muli", sans-serif;
+  padding: 10px;
+}
+
+.header figure {
+  margin: 0;
+}
+.header figure img {
+  height: 70px;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not-found p {
+  margin: 0;
+}
+.not-found .not-found__number {
+  font-size: 4em;
+  animation-name: bit_text;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bit_text {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=not-found.css.map */
