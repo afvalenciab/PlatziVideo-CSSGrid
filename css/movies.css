@@ -22,7 +22,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.header .menu .menu__options li a {
+.footer a, .header .menu .menu__options li a {
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -30,14 +30,17 @@
   will-change: transform;
 }
 
-.header .menu .menu__options li a:hover {
+.footer a:hover, .header .menu .menu__options li a:hover {
   text-decoration: underline;
   transform: scale(1.04);
 }
 
 body {
-  background: #8f57fd;
   margin: 0;
+}
+
+.container {
+  background: #8f57fd;
   color: #fff;
   font-family: "Muli", sans-serif;
   padding: 5px 15px;
@@ -104,9 +107,13 @@ body {
   margin-bottom: 10px;
   font-size: 1.5em;
 }
-.search input {
+.search .search__bar-container {
+  position: relative;
   width: 65%;
+}
+.search .search__bar-input {
   height: 35px;
+  width: 100%;
   outline: none;
   border: 1px solid #fff;
   background: #AB88FF;
@@ -115,9 +122,115 @@ body {
   font-size: 0.9em;
   color: #fff;
   font-family: "Muli", sans-serif;
+  position: relative;
+  box-sizing: border-box;
 }
-.search input::placeholder {
+.search .search__bar-input::placeholder {
   color: #fff;
+}
+
+.icon-search::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+.movies {
+  display: grid;
+  grid-auto-rows: 50px 350px;
+  grid-gap: 5px;
+  align-items: center;
+}
+.movies h3 {
+  margin: 0;
+}
+.movies .carrousel__list {
+  display: grid;
+  grid-auto-columns: 200px;
+  grid-column-gap: 10px;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  padding: 50px 0;
+}
+.movies .carrousel__list .carrousel__item {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s all;
+  transform-origin: center left;
+  cursor: pointer;
+}
+.movies .carrousel__list .carrousel__item figure {
+  margin: 0;
+}
+.movies .carrousel__list .carrousel__item figure img {
+  vertical-align: top;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+}
+.movies .carrousel__list .carrousel__item:hover {
+  transform: scale(1.4);
+  opacity: 1;
+}
+.movies .carrousel__list .carrousel__item:hover ~ .carrousel__item {
+  transform: translateX(80px);
+}
+.movies .carrousel__list .carrousel__item:hover .carrousel__item-cover {
+  display: block;
+}
+.movies .carrousel__list .carrousel__item-cover {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  display: none;
+}
+.movies .carrousel__list .carrousel__item-cover p {
+  margin: 0;
+}
+.movies .carrousel__list .carrousel__item-cover .tittle__movie {
+  font-size: 16px;
+  font-weight: 600px;
+}
+.movies .carrousel__list .carrousel__item-cover .detail__movie {
+  font-size: 12px;
+}
+
+.carrousel__list:hover .carrousel__item {
+  opacity: 0.5;
+}
+
+.icon {
+  display: inline-block;
+  color: #21C08B;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  background: #FFF;
+}
+
+.icon-plus:before {
+  content: "";
+}
+
+.icon-play:before {
+  content: "";
+}
+
+.footer {
+  height: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 15px;
+  align-content: center;
+  justify-content: start;
 }
 
 /*# sourceMappingURL=movies.css.map */
