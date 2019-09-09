@@ -42,6 +42,7 @@ body {
 }
 .not-found .not-found__number {
   font-size: 4em;
+  animation-name: bit_text;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
