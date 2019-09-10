@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@import '../css/font-icon.css';
+.header .menu .menu__options li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s;
+  will-change: transform;
+}
+
+.header .menu .menu__options li a:hover {
+  text-decoration: underline;
+  transform: scale(1.04);
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 70px minmax(300px, 1fr) 70px;
+  grid-row-gap: 5px;
+  background: #8f57fd;
+  color: #fff;
+  font-family: "Muli", sans-serif;
+  padding: 5px 15px;
+  align-content: space-evenly;
+}
+
+.header {
+  height: 70px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 5px;
+  align-items: center;
+}
+.header figure {
+  margin: 0;
+}
+.header figure img {
+  vertical-align: top;
+  height: 70px;
+}
+.header .menu {
+  grid-column-start: 3;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: inherit;
+  cursor: pointer;
+}
+.header .menu .menu__options {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 110px;
+  display: none;
+}
+.header .menu .menu__options li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.header .menu .menu__options li a {
+  letter-spacing: 0.5px;
+}
+.header .menu:hover .menu__options {
+  display: block;
+}
+.header .icon-user-circle:before {
+  content: "";
+  font-size: 2em;
+  margin: 0 7px;
+}
+
+.video {
+  display: grid;
+  grid-template-rows: repear(2, auto);
+  grid-row-gap: 5px;
+  justify-content: center;
+}
+.video .video__item {
+  width: 100%;
+  height: auto;
+}
+.video .button__play__pause {
+  border: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: transparent;
+  outline: none;
+}
+
+.icon-play2:before {
+  content: "";
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.icon-pause:before {
+  content: "";
+}
+
+.icon-stop:before {
+  content: "";
+}
+
+.icon-unmute:before {
+  content: "";
+}
+
+.icon-mute:before {
+  content: "";
+}
+
+/*# sourceMappingURL=mediaPlayer.css.map */

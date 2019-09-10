@@ -1,0 +1,141 @@
+//icons
+@import '../css/font-icon.css';
+
+//VARIABLES
+$color-font: #fff;
+$font-muli: "Muli", sans-serif;
+$height-header-footer: 70px;
+$height-video: minmax(300px, 1fr);
+
+//Extend
+%a-settings {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-font;
+  transition: 0.2s;
+  will-change: transform;
+}
+%a-transform {
+  text-decoration: underline;
+  transform: scale(1.04);
+}
+
+body{
+  margin: 0;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: $height-header-footer $height-video $height-header-footer;  
+  grid-row-gap: 5px;
+  background: #8f57fd;  
+  color: $color-font;
+  font-family: $font-muli;
+  padding: 5px 15px;
+  align-content: space-evenly;
+}
+
+//HEADER
+.header {
+  height: 70px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 5px;
+  align-items: center;
+
+  figure {
+    margin: 0;
+    img {
+      vertical-align: top;
+      height: 70px;
+    }
+  }
+
+  .menu {
+    grid-column-start: 3;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: inherit;
+    cursor: pointer;
+
+    .menu__options {
+      margin: 0;
+      padding: 0;
+      text-align: right;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 110px;
+      display: none;
+
+      li {
+        list-style: none;
+        margin-bottom: 10px;
+        a {
+          @extend %a-settings;
+          letter-spacing: 0.5px;
+        }
+        a:hover {
+          @extend %a-transform;
+        }
+      }
+    }
+  }
+
+  .menu:hover .menu__options {
+    display: block;
+  }
+
+  .icon-user-circle:before {
+    content: "\e900";
+    font-size: 2em;
+    margin: 0 7px;
+  }
+}
+ //END HEADER
+
+ //VIDEO
+.video{
+  display: grid;
+  grid-template-rows: repear(2, auto);
+  grid-row-gap: 5px;
+  justify-content: center;
+
+  .video__item{
+    width: 100%;
+    height: auto;
+  }
+
+  .button__play__pause{
+    border: none;
+    // border: 1px solid #fff;
+    // border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: transparent;
+    // background: #AB88FF;
+    outline: none;
+  }
+}
+
+.icon-play2:before {
+  content: "\ea1c";
+  color: $color-font;
+  font-size: 30px;
+  cursor: pointer;
+}
+.icon-pause:before {
+  content: "\ea1d";
+}
+.icon-stop:before {
+  content: "\ea1e";
+}
+.icon-unmute:before {
+  content: "\ea27";
+}
+.icon-mute:before {
+  content: "\ea2a";
+}
+ //END VIDEO
