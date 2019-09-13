@@ -13,6 +13,11 @@
   transform: scale(1.04);
 }
 
+.icon {
+  color: #fff;
+  font-size: 20px;
+}
+
 body {
   margin: 0;
 }
@@ -86,20 +91,27 @@ body {
   width: 100%;
   height: auto;
 }
-.video .button__play__pause {
+.video .video__controls {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 5px;
+  justify-content: start;
+}
+.video .button {
   border: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
   width: 30px;
   height: 30px;
   padding: 0;
   background: transparent;
+  background: #AB88FF;
   outline: none;
+  cursor: pointer;
 }
 
 .icon-play2:before {
   content: "";
-  color: #fff;
-  font-size: 30px;
-  cursor: pointer;
 }
 
 .icon-pause:before {

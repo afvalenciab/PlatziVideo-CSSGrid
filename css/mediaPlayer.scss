@@ -19,6 +19,10 @@ $height-video: minmax(300px, 1fr);
   text-decoration: underline;
   transform: scale(1.04);
 }
+%icon-settings{
+  color: $color-font;
+  font-size: 20px;  
+}
 
 body{
   margin: 0;
@@ -107,24 +111,33 @@ body{
     height: auto;
   }
 
-  .button__play__pause{
+  .video__controls{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 5px;
+    justify-content: start;
+  }
+
+  .button{
     border: none;
-    // border: 1px solid #fff;
-    // border-radius: 50%;
+    border: 1px solid #fff;
+    border-radius: 5px;
     width: 30px;
     height: 30px;
     padding: 0;
     background: transparent;
-    // background: #AB88FF;
+    background: #AB88FF;
     outline: none;
+    cursor: pointer;
   }
 }
 
+.icon{
+  @extend %icon-settings;
+}
+
 .icon-play2:before {
-  content: "\ea1c";
-  color: $color-font;
-  font-size: 30px;
-  cursor: pointer;
+  content: "\ea1c";  
 }
 .icon-pause:before {
   content: "\ea1d";
