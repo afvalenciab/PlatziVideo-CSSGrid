@@ -9,6 +9,7 @@
 *.userosscache
 *.sln.docstates
 dist
+.cache
 .cache/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
@@ -210,7 +211,7 @@ _pkginfo.txt
 # files ending in .cache can be ignored
 *.[Cc]ache
 # but keep track of directories ending in .cache
-!*.[Cc]ache/
+*.[Cc]ache/
 
 # Others
 ClientBin/
