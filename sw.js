@@ -4,19 +4,19 @@ const VERSION = 'v1';
 async function precache() {
   const cache = await caches.open(VERSION); // De esta forma abrimos uan instancia del cache
   return cache.addAll([
-    '/',
-    '/css/mediaPlayer.css',
-    '/css/font-icon.css',
-    '/fonts/icomoon.eot?rwaqaw',
-    '/fonts/icomoon.svg?rwaqaw',
-    '/fonts/icomoon.ttf?rwaqaw',
-    '/fonts/icomoon.woff?rwaqaw',
-    '/images/Corto.mp4',
-    '/pages/mediaPlayer.html',
-    '/script/index.js',
-    '/script/mediaPlayer.js',
-    '/script/plugins/AutoPlay.js',
-    '/script/plugins/AutoPause.js',
+    // '/',
+    // '/css/mediaPlayer.css',
+    // '/css/font-icon.css',
+    // '/fonts/icomoon.eot?rwaqaw',
+    // '/fonts/icomoon.svg?rwaqaw',
+    // '/fonts/icomoon.ttf?rwaqaw',
+    // '/fonts/icomoon.woff?rwaqaw',
+    // '/images/Corto.mp4',
+    // '/pages/mediaPlayer.html',
+    // '/script/index.js',
+    // '/script/mediaPlayer.js',
+    // '/script/plugins/AutoPlay.js',
+    // '/script/plugins/AutoPause.js',
   ]);
 }
 

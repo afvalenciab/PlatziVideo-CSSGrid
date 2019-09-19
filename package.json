@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
+    "startParcel": "parcel *.html pages/*.html pages/**/*.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,6 +32,11 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "live-server": "^1.2.1"
-  }
+    "live-server": "^1.2.1",
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.6.3"
+  },
+  "browsersList": [
+    "last 1 Chrome version"
+  ]
 }

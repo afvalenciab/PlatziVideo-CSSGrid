@@ -1,11 +1,11 @@
-import MediaPlayer from './mediaPlayer.js';
-import AutoPlay from './plugins/AutoPlay.js';
-import AutoPause from './plugins/AutoPause.js';
+import MediaPlayer from './mediaPlayer';
+import AutoPlay from './plugins/AutoPlay';
+import AutoPause from './plugins/AutoPause';
 
 const video = document.querySelector('.video__item');
-const buttonPlay = document.querySelector('#button__play__pause');
-const buttonStop = document.querySelector('#button__stop');
-const buttonMute = document.querySelector('#button__mute');
+const buttonPlay: HTMLElement = document.querySelector('#button__play__pause');
+const buttonStop: HTMLElement = document.querySelector('#button__stop');
+const buttonMute: HTMLElement = document.querySelector('#button__mute');
 const iconPlay = document.querySelector('#icon-play');
 const iconMute = document.querySelector('#icon-mute');
 
@@ -55,7 +55,7 @@ buttonMute.onclick = () => {
 };
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').catch((error) => {
+  navigator.serviceWorker.register('../sw.js').catch((error) => {
     console.log(error);
   });
 }
