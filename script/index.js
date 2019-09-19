@@ -1,5 +1,6 @@
 import MediaPlayer from './mediaPlayer.js';
 import AutoPlay from './plugins/AutoPlay.js';
+import AutoPause from './plugins/AutoPause.js';
 
 const video = document.querySelector('.video__item');
 const buttonPlay = document.querySelector('#button__play__pause');
@@ -8,7 +9,7 @@ const buttonMute = document.querySelector('#button__mute');
 const iconPlay = document.querySelector('#icon-play');
 const iconMute = document.querySelector('#icon-mute');
 
-const player = new MediaPlayer({ el: video, plugins: [new AutoPlay()] });
+const player = new MediaPlayer({ el: video, plugins: [new AutoPlay(), new AutoPause()] });
 
 function changeStatusVideo({ media }) {
   if (media.paused) {
@@ -53,42 +54,8 @@ buttonMute.onclick = () => {
   changeSoundVideo(player);
 };
 
-// function Persona(name) {
-//   this.name = name;  
-//   this.getNombre = function () {
-//     console.log(`Nombre del hijo ${this.name}`);
-//   };
-// }
-
-// function Persona2(name) {
-//   this.name = name;
-//   this.hijo = 'manuel';
-// }
-
-// Persona2.prototype.getName = function () {
-//   console.log(`Nombre del Padre ${this.name}`);
-// };
-
-// Persona2.prototype.getHijo = function () {
-//   console.log(`Nombre del hijo hijo ${this.hijo}`);
-// };
-
-// function heredaDe(prototipoHijo, protopipoPadre) {
-// 	let fn = function () {};
-// 	fn.prototype = protopipoPadre.prototype;
-// 	prototipoHijo.prototype = new fn;
-// 	prototipoHijo.prototype.constructor = prototipoHijo;
-// }
-
-// heredaDe(Persona, Persona2);
-
-// const felipe = new Persona2('felipe');
-// felipe.getName();
-// felipe.getHijo();
-
-// const andres = new Persona('andres');
-// andres.getNombre();
-// andres.getName();
-// andres.getHijo();
-// console.log(felipe);
-// console.log(andres);
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch((error) => {
+    console.log(error);
+  });
+}
