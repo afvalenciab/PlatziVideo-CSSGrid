@@ -1,6 +1,7 @@
 import MediaPlayer from './mediaPlayer';
 import AutoPlay from './plugins/AutoPlay';
 import AutoPause from './plugins/AutoPause';
+import AdsPlugins from './plugins/Ads';
 
 const video = document.querySelector('.video__item');
 const buttonPlay: HTMLElement = document.querySelector('#button__play__pause');
@@ -9,7 +10,7 @@ const buttonMute: HTMLElement = document.querySelector('#button__mute');
 const iconPlay = document.querySelector('#icon-play');
 const iconMute = document.querySelector('#icon-mute');
 
-const player = new MediaPlayer({ el: video, plugins: [new AutoPlay(), new AutoPause()] });
+const player = new MediaPlayer({ el: video, plugins: [new AutoPlay(), new AutoPause(), new AdsPlugins() ] });
 
 function changeStatusVideo({ media }) {
   if (media.paused) {
