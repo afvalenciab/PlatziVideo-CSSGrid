@@ -36,6 +36,44 @@ class AdsPlugins {
     const ad = this.ads.getAd();
     this.currentAd = ad;
     this.adsContainer.innerHTML = `
+    <style>
+      .ads {
+        position: absolute;
+        width: 600px;
+        height: 80px;
+        background: #FFF;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .ads a {
+        text-decoration: none;
+        color: #000;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .ads a img {
+        width: 70px;
+        height: 70px;
+      }
+      .ads a div {
+        width: 530px;
+        padding: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+      .ads a div h5 {
+        margin: 0;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .ads a div p {
+        margin: 0;
+      }    
+    </style>
     <div class="ads">
       <a href="${this.currentAd.url} target = "_blank">
         <img src="${this.currentAd.imageUrl}" />

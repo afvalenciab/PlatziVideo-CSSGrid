@@ -1,7 +1,7 @@
-import MediaPlayer from './mediaPlayer';
-import AutoPlay from './plugins/AutoPlay';
-import AutoPause from './plugins/AutoPause';
-import AdsPlugins from './plugins/Ads';
+import MediaPlayer from '@afvalenciab/platzi__mediaplayer';
+import AutoPlay from '@afvalenciab/platzi__mediaplayer/lib/plugins/AutoPlay';
+import AutoPause from '@afvalenciab/platzi__mediaplayer/lib/plugins/AutoPause';
+import AdsPlugins from '@afvalenciab/platzi__mediaplayer/lib/plugins/Ads';
 
 const video = document.querySelector('.video__item');
 const buttonPlay: HTMLElement = document.querySelector('#button__play__pause');

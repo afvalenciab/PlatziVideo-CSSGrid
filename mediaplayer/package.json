@@ -1,0 +1,16 @@
+{
+  "name": "@afvalenciab/platzi__mediaplayer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/mediaPlayer.js",
+  "scripts": {
+    "build": "tsc src/**/*.ts src/plugins/*.ts src/plugins/**/*.ts --outDir lib ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andres Felipe Valencia Benitez",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.6.3"
+  }
+}
